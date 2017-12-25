@@ -59,19 +59,23 @@ body
 
 // team
 .team
-  background: brown
-  min-height: 800px
+  background: orange
 
 .container--team-members
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+  grid-gap: 1em
 
 .item--team-member
-  padding: 4em
+  padding: 1em
+  border: 1px solid black
 
 .team-member__logo
   border-radius: 50%
   max-width: 100%
+
+.team-member__name
+  padding: 10px
 
 // contact
 .contact
