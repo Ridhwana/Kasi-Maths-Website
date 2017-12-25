@@ -240,21 +240,25 @@ a {
                     float: left;
                     text-align: right;
                     padding-right: 30px;
+                    margin-left: -30px;
                 }
                 > .timeline-item:nth-child(odd) .timeline-content {
                     float: right;
                     text-align: left;
                     padding-left: 30px;
+                    margin-right: -30px;
                 }
                 > .timeline-item:nth-child(even) .timeline-info {
                     float: right;
                     text-align: left;
                     padding-left: 30px;
+                    margin-right: -30px;
                 }
                 > .timeline-item:nth-child(even) .timeline-content {
                     float: left;
                     text-align: right;
                     padding-right: 30px;
+                    margin-left: -30px;
                 }
                 > .timeline-item.period .timeline-content {
                     float: none;
