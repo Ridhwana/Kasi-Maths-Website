@@ -1,5 +1,17 @@
 ---
 ---
+$white: #FFFFFF
+$black: #000000
+$yellow: #FFB612
+$green: #007A4D
+$blue: #002395
+$red: #DE3831
+
+
+$small-text: 16px
+$medium-text: 20px
+$large-text: 22px
+
 body
   margin: 0
   font-family: 'Lato'
@@ -85,13 +97,43 @@ button
 .team-member__name
   padding: 10px
 
+.container--team-members >:nth-child(1)
+  background: $black
+
+.container--team-members >:nth-child(2)
+  background: $yellow
+
+.container--team-members >:nth-child(3)
+  background: $green
+
+.container--team-members >:nth-child(4)
+  background: $blue
+
+.container--team-members >:nth-child(5)
+  background: $red
+
+// partners
+.partners
+  background: lighten(black, 98%)
+
+.container--partners
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+
+.item--partner
+  padding: 4em
+
+.partner__logo
+  max-width: 100%
+
 // contact
 .contact
-  background: #deb2b2
+  background: lighten(grey, 45%)
 
 .container--contact-us
   display: grid
-  grid-template-columns: 40% 60%
+  grid-template-columns: 30% 60%
+  grid-gap: 10%
 
 .item--contact-us-form
   text-align: left
