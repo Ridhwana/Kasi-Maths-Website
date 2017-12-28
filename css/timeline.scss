@@ -1,6 +1,6 @@
 ---
 ---
-
+$yellow: #FFB612;
 $primary-color: #FF6B6B;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
@@ -98,17 +98,20 @@ a {
         top: 0; bottom: 0; left: 0;
         width: 15px;
         &:before {
-            background: $primary-color;
-            border: 3px solid transparent;
-            border-radius: 100%;
-            content: "";
-            display: block;
-            height: 15px;
-            position: absolute;
-            top: 4px; left: 0;
-            width: 15px;
-            transition: background 0.3s ease-in-out,
-                    border 0.3s ease-in-out;
+          background: url(/images/SA-flag.svg);
+              background-size: 118px;
+              background-repeat: no-repeat;
+              background-position: center;
+              border: 5px solid white;
+              border-radius: 100%;
+              content: "";
+              display: block;
+              height: 70px;
+              width: 70px;
+              position: absolute;
+              top: 4px;
+              left: -32px;
+              transition: 0.3s ease-in-out, border 0.3s ease-in-out;
         }
         &:after {
             content: "";
@@ -116,15 +119,16 @@ a {
             background: #CCD5DB;
             display: block;
             position: absolute;
-            top: 24px; bottom: 0; left: 6px;
+            top: 88px;
+            bottom: 0;
+            left: 9px;
         }
         .timeline-item:last-child &:after {
             content: none;
         }
     }
     .timeline-item:not(.period):hover .timeline-marker:before {
-        background: transparent;
-        border: 3px solid $primary-color;
+        border: 5px solid $yellow;
     }
 
     /*----- TIMELINE CONTENT -----*/
@@ -234,7 +238,7 @@ a {
                 }
                 .timeline-info,
                 .timeline-content {
-                    width: 50%;
+                    width: 49%;
                 }
                 > .timeline-item:nth-child(odd) .timeline-info {
                     float: left;
@@ -279,6 +283,8 @@ a {
                 }
             }
         }
+
+
 
     /*----------------------------------------------
         MOD: MARKER OUTLINE
