@@ -10,7 +10,10 @@ $red: #DE3831
 
 $small-text: 16px
 $medium-text: 20px
-$large-text: 22px
+$large-text: 24px
+$extra-large-text: 28px
+
+$header-height: 80px
 
 body
   margin: 0
@@ -21,6 +24,10 @@ body
   padding: 2em 10em
   text-align: center
 
+.section__title
+  font-size: $extra-large-text
+  margin-bottom: 32px
+
 input, textarea, button
   padding: 8px
   border-radius: 4px
@@ -28,6 +35,68 @@ input, textarea, button
 
 button
   min-width: 150px
+
+// header
+.header
+  height: $header-height
+  width: 100%
+  background: $black
+  opacity: 0.9
+  position: fixed
+  top: 0
+  list-style-type: none
+  margin: 0
+  padding: 0
+  color: white
+  z-index: 2
+
+.header__logo
+  width: 150px
+
+.header__item
+  display: inline-block
+  vertical-align: top
+
+.header__title
+  --paddingA: calc( #{$header-height} - #{$extra-large-text})
+  padding: calc(var(--paddingA) / 2)
+  font-size: $extra-large-text
+
+.header__navigation
+  float: right
+
+.header__item-navigation
+  $nav-item-padding: 10px
+  padding: $nav-item-padding
+  --marginA: calc( #{$header-height} - #{$medium-text} - #{$nav-item-padding})
+  margin: calc(var(--marginA) / 2)
+  font-size: $medium-text
+  border-radius: 4px
+
+.header__navigation >:nth-child(1)
+  background: $red
+.section--mission .section__title
+  color: $red
+
+.header__navigation >:nth-child(2)
+  background: $yellow
+.section--journey .section__title
+  color: $yellow
+
+.header__navigation >:nth-child(3)
+  background: $green
+.section--team .section__title
+  color: $green
+
+.header__navigation >:nth-child(4)
+  background: $blue
+.section--partners .section__title
+  color: $blue
+
+.header__navigation >:nth-child(5)
+  background: grey
+.section--contact .section__title
+  color: grey
 
 // banner
 .banner
