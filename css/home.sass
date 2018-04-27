@@ -15,13 +15,21 @@ $extra-large-text: 28px
 
 $header-height: 80px
 
+$break-mobile-s: 320px
+$break-mobile-m: 375px
+$break-mobile-l: 428px
+$break-tablet: 768px
+$break-screen: 992px
+
+
+
 body
   margin: 0
   font-family: 'Lato'
 
 // general
 .section
-  padding: 2em 10em
+  padding: 2em 3em
   text-align: center
 
 .section__title
@@ -151,12 +159,15 @@ button
   // color: whitesmoke
 
 // team
-.section--team
 
 .container--team-members
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
   grid-gap: 1em
+
+
+  @media screen and (max-width: $break-screen)
+    display: block
 
 .item--team-member
   padding: 1em
@@ -167,6 +178,9 @@ button
 .team-member__logo
   border-radius: 50%
   max-width: 100%
+
+  @media screen and (max-width: $break-screen)
+    max-width: 200px
 
 .team-member__name
   padding: 10px
@@ -186,6 +200,7 @@ button
 .container--team-members >:nth-child(5)
   background: $red
 
+
 // partners
 .section--partners
   background: lighten(black, 98%)
@@ -194,11 +209,17 @@ button
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
 
+  @media screen and (max-width: $break-screen)
+    display: block
+
 .item--partner
   padding: 4em
 
 .partner__logo
   max-width: 100%
+
+  @media screen and (max-width: $break-screen)
+    max-width: 200px
 
 // contact
 .section--contact
@@ -209,6 +230,9 @@ button
   grid-template-columns: 30% 60%
   grid-gap: 10%
 
+  @media screen and (max-width: $break-screen)
+    display: block
+
 .item--contact-us-form
   text-align: left
 
@@ -217,6 +241,9 @@ button
   grid-template-columns: repeat(4, [col] auto )
   grid-template-rows: repeat(3, [row] auto  )
   grid-gap: 5%
+
+  @media screen and (max-width: $break-screen)
+    display: block
 
   input
     width: 100%
